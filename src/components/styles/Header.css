@@ -1,0 +1,50 @@
+.NavHeader {
+    height: 100px;
+    background-color: var(--colorprimary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.NavHeader__img {
+    height: auto;
+    width: 200px;
+    margin-left: 1em;
+}
+
+.NavHeader__menu {
+    margin-right: 30px;
+    font-size: 17px;
+}
+
+.NavHeader__menu ul {
+    display: none;
+    list-style-type: none;
+    position: absolute;
+    text-align: right;
+    margin-right: 30px;
+    width: auto;
+    padding: 0;
+
+}
+
+.NavHeader__menu ul li {
+    margin-top: 7px;
+
+}
+
+.NavHeader__menu:hover ul,ul:hover {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.NavHeader__menu--img {
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}

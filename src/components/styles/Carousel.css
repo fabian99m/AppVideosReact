@@ -1,0 +1,23 @@
+
+
+.carousel {
+    width: 100%;
+    padding: 0 20px;
+    position: relative;
+}
+
+.carousel__container {
+    white-space: nowrap;
+    margin: 0 2.5em;
+    padding-bottom: 10px;
+    overflow-x: scroll;
+}
+
+.carousel__container::-webkit-scrollbar-thumb {
+    background-color: rgba(17, 14, 151, 0.3);
+    border-radius: 10px;
+}
+
+.carousel__container::-webkit-scrollbar {
+    background-color: rgba(17, 14, 151, 0.3);
+}
