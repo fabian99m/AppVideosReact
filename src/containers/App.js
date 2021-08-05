@@ -12,26 +12,21 @@ import img2 from "../assets/img2.jpg";
 import img3 from "../assets/img3.jpg";
 import img4 from "../assets/img4.jpg";
 
+import useInitialState from "../Hooks/useInitialState";
+
 import "./styles/App.scss";
 
 const App = () => {
-  const [videos, setVideos] = useState([]);
 
-  useEffect(() => {  
-    fetch("http://localhost:3002/initialState")
-      .then((response) => response.json())
-      .then((data) => setVideos(data));
-
-  },[]);
-
-  console.log(videos);
+  const [videos] = useInitialState('http://localhost:3002/initialState');
 
   return (
+
     <React.Fragment>
 
       <Header />
       <Search />
-      
+
       <Categories nombre="Mi lista">
         <Carousel>
           <CarouselItem url={img1}></CarouselItem>
@@ -43,8 +38,9 @@ const App = () => {
 
       <Categories nombre="Tendencias">
         <Carousel>
-          <CarouselItem url={img1}></CarouselItem>
-          <CarouselItem url={img2}></CarouselItem>
+          {videos.trends && videos.trends.map( video =>
+          <CarouselItem {...video} ></CarouselItem>
+          )}
         </Carousel>
       </Categories>
 
