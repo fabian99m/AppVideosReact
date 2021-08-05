@@ -4,8 +4,8 @@ import "./styles/Carousel.css";
 
 const Carousel = ({ children }) => {
   return (
-    <section class="carousel">
-      <div class="carousel__container">
+    <section className="carousel">
+      <div className="carousel__container">
         {children}
       </div>
     </section>

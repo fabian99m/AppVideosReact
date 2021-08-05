@@ -3,7 +3,7 @@ import React from 'react'
 import logo from '../assets/logo-platzi-video-BW2.png';
 import userlogo from "../assets/user.png"
 
-import './styles/Header.css'
+import './styles/Header.scss'
 
  const Header = () => {
     return (

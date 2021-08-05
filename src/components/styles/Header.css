@@ -1,50 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,600;1,500;1,600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mulish", sans-serif;
+}
+
+body {
+  background-color: #8F57fd;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 .NavHeader {
-    height: 100px;
-    background-color: var(--colorprimary);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  height: 100px;
+  background-color: #8F57fd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .NavHeader__img {
-    height: auto;
-    width: 200px;
-    margin-left: 1em;
+  height: auto;
+  width: 200px;
+  margin-left: 1em;
 }
 
 .NavHeader__menu {
-    margin-right: 30px;
-    font-size: 17px;
+  margin-right: 30px;
+  font-size: 17px;
 }
-
 .NavHeader__menu ul {
-    display: none;
-    list-style-type: none;
-    position: absolute;
-    text-align: right;
-    margin-right: 30px;
-    width: auto;
-    padding: 0;
-
+  display: none;
+  list-style-type: none;
+  position: absolute;
+  text-align: right;
+  margin-right: 30px;
+  width: auto;
+  padding: 0;
 }
-
 .NavHeader__menu ul li {
-    margin-top: 7px;
-
+  margin-top: 7px;
 }
 
-.NavHeader__menu:hover ul,ul:hover {
-    display: block;
+.NavHeader__menu:hover ul,
+ul:hover {
+  display: block;
 }
 
 a {
-    text-decoration: none;
-    color: white;
+  color: white;
 }
 
 .NavHeader__menu--img {
-    color: white;
-    display: flex;
-    align-items: center;
-    gap: 3px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 3px;
 }
