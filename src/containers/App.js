@@ -11,7 +11,6 @@ import useInitialState from "../Hooks/useInitialState";
 import "./styles/App.scss";
 
 const App = () => {
-
   const [videos] = useInitialState("http://localhost:3002/initialState");
 
   return (
@@ -19,15 +18,17 @@ const App = () => {
       <Header />
       <Search />
 
-      {Object.keys(videos).map( name => (
-        <Categories nombre={name}>
-          <Carousel>
-            {videos[name].map( videos => (
-              <CarouselItem {...videos}></CarouselItem>
-            ))}
-          </Carousel>
-        </Categories>
-      ))}
+      {Object.keys(videos).map(
+        name => videos[name].length > 0 && (
+            <Categories nombre={name}>
+              <Carousel>
+                {videos[name].map(videos => (
+                  <CarouselItem {...videos}></CarouselItem>
+                ))}
+              </Carousel>
+            </Categories>
+          )
+      )}
 
       <Footer />
     </React.Fragment>
